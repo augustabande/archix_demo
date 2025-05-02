@@ -10,7 +10,11 @@ export default defineConfig({
       targets: [
         {
           src: 'public/_redirects',
-          dest: '.' // Copia nella root di dist/
+          dest: '.' // Copia nella radice di dist/
+        },
+        {
+          src: 'public/blocked.html',
+          dest: '.' // Copia nella radice di dist/
         }
       ]
     })
