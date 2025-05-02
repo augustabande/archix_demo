@@ -7,25 +7,39 @@
   <style>
     body {
       font-family: sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #f5f5f5;
-    }
-    .box {
       text-align: center;
-      padding: 2rem;
-      background: white;
-      border: 1px solid #ccc;
-      border-radius: 10px;
+      padding: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1rem;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Sitio reservado</h1>
-    <p>El acceso a este sitio está restringido temporalmente.</p>
-  </div>
+  <h1>Acceso restringido</h1>
+  <p>Este sitio está protegido. Introduce la contraseña para continuar.</p>
+  <input type="password" id="password" placeholder="Contraseña" />
+  <br />
+  <button onclick="checkPassword()">Entrar</button>
+  <p id="error" style="color: red;"></p>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === "demo") {
+        localStorage.setItem("auth", "true");
+        window.location.href = "/";
+      } else {
+        document.getElementById("error").textContent = "Contraseña incorrecta.";
+      }
+    }
+
+    // Se l'utente ha già inserito la password
+    if (localStorage.getItem("auth") === "true") {
+      window.location.href = "/";
+    }
+  </script>
 </body>
 </html>
