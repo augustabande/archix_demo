@@ -7,7 +7,7 @@ export default function ServiceSectionTwo() {
                 <div className="row justify-content-center">
                     <div className="section-title">
                         <div className="heading-animation">
-                            <h3>Our Services</h3>
+                            <h2>Our services</h2>
                         </div>
                     </div>
                 </div>

@@ -10,7 +10,7 @@ export default function ServiceSection() {
                         <div className="services-tab-wrapper">
                             <div className="section-title">
                                 <div className="heading-animation">
-                                    <h2>Our Services</h2>
+                                    <h3>Our Services</h3>
                                 </div>
                             </div>
                             <div className="services-tabs mt-100">
