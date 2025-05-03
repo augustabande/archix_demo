@@ -1,5 +1,4 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect, useState } from "react";
 import App from '@/App.jsx';
 import Home from '@/pages/Home.jsx';
 import About from '@/pages/About.jsx';
@@ -14,18 +13,9 @@ import Projects from "@/pages/projects/ProjectIndex.jsx";
 import ProjectsShow from "@/pages/projects/ProjectDetails.jsx";
 import Blog from "@/pages/blog/BlogIndex.jsx";
 import BlogShow from "@/pages/blog/BlogDetails.jsx";
-import Login from "../Login.jsx";
 
 export default function AppRoutes() {
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    //const isDev = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
-    const isDev = false;
-    return isDev || localStorage.getItem("authenticated") === "true";
-  });
-
-  if (!isAuthenticated) {
-    return <Login onLogin={() => setIsAuthenticated(true)} />;
-  }
+  
   return (
     <Routes>
       <Route path="/" element={<App />}>
