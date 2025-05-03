@@ -11,7 +11,7 @@ export default function OffCanvas() {
             </div>
             <div className="logo-side mb-30">
                 <div className="logo">
-                    <Link to="/home-2" className="logo">RS alls.</Link>
+                    <Link to="/home-2" className="logo">RS Walls.</Link>
                 </div>
             </div>
             <div className="side-info">
