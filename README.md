@@ -39,16 +39,20 @@ It serves as a **portfolio case study** to demonstrate my expertise in building 
    cd archix-react
    
 2. Install dependencies
+    ```bash
     yarn install
 
 3. Start development server
+    ```bash
     yarn dev
 
 4. Build for production
-    yarn build
+    ```bash
+   yarn build
 
 5. Preview production build
-    yarn preview
+   ```bash
+   yarn preview
    
  ---
 
